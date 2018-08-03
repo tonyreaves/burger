@@ -4,6 +4,9 @@ var burger = {
     selectAll: function (cb) {
         orm.selectAll("burgers", function (res) {
             console.log(res);
+
+            //console.log(cb);
+            cb(res);
         });
     },
     // The variables cols and vals are arrays.
@@ -19,6 +22,6 @@ var burger = {
     },
 }
 
-burger.selectAll()
+///burger.selectAll()
 
 module.exports = burger;
