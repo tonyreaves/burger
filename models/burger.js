@@ -2,8 +2,8 @@ var orm = require("../config/orm.js");
 
 var burger = {
     selectAll: function (cb) {
-        orm.all("burgers", function (res) {
-            cb(res);
+        orm.selectAll("burgers", function (res) {
+            console.log(res);
         });
     },
     // The variables cols and vals are arrays.
@@ -12,15 +12,13 @@ var burger = {
             cb(res);
         });
     },
-    updateOne: function (objColVals, condition, cb) {
-        orm.update("burgers", objColVals, condition, function (res) {
+    updateOne: function (id, condition, cb) {
+        orm.update("burgers", id, condition, function (res) {
             cb(res);
         });
     },
-
-    // delete: function(condition, cb) {
-    //   orm.delete("burgers", condition, function(res) {
-    //     cb(res);
-    //   });
 }
+
+burger.selectAll()
+
 module.exports = burger;
