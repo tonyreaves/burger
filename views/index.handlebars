@@ -11,7 +11,7 @@
         {{#each burgers}}
           {{#unless this.devoured}}
             <div>
-              <form action="/burgers/{{this.id}}?_method=PUT" method="POST">
+              <form action="/burgers/{{this.id}}?_method=PUT" method="updateOne">
                 <button type="submit" class='burgersToEat'> {{this.burger_name}}</button>
               </form>
             </div>

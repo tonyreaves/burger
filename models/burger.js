@@ -3,7 +3,7 @@ var orm = require("../config/orm.js");
 var burger = {
     selectAll: function (cb) {
         orm.selectAll("burgers", function (res) {
-            console.log(res);
+            // console.log(res);
 
             //console.log(cb);
             cb(res);
@@ -15,6 +15,7 @@ var burger = {
             cb(res);
         });
     },
+
     updateOne: function (id, condition, cb) {
         orm.update("burgers", id, condition, function (res) {
             cb(res);
