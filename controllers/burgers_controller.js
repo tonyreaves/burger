@@ -1,7 +1,6 @@
 var express = require("express");
 var router = express.Router();
 
-
 var burger = require("../models/burger.js");
 
 //routes and logic
@@ -33,7 +32,7 @@ router.put("/api/burgers/:id", function(req, res) {
 });
 
 router.post("/api/burgers", function(req, res) {
-  burger.create([
+  burger.insertOne([
     "name", "devoured"
   ], [
     req.body.name, req.body.devoured
