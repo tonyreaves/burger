@@ -3,12 +3,14 @@ body {
 }
 
 .addBurgerButton {
-    background-color: red;
+    background-color: orangered;
     color: white;
+    padding: .5em;
     width: 10em;
+    font-size: 1em;
 }
 
-.addCol {
+.formCol {
     width: 95vw;
 }
 
@@ -24,9 +26,14 @@ width: 10em;
 .burgersToEat{
 background-color: orangered;
 color: wheat;
+padding: .5em;
+min-width: 18em;
 }
 
 .burgersEaten {
 background-color: wheat;
 color: orangered;
+padding: .5em;
+min-width: 18em;
+
 }
