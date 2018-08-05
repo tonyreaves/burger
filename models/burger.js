@@ -1,24 +1,26 @@
+//call orm
 var orm = require("../config/orm.js");
 
+//define burger, import orm function
 var burger = {
-    selectAll: function (cb) {
-        orm.selectAll("burgers", function (res) {
-            //console.log(cb);
-            cb(res);
-        });
-    },
-    // The variables cols and vals are arrays.
-    insertOne: function (cols, vals, cb) {
-        orm.create("burgers", cols, vals, function (res) {
-            cb(res);
-        });
-    },
-
-    updateOne: function (id, condition, cb) {
-        orm.put("burgers", id, condition, function (res) {
-            cb(res);
-        });
-    },
+	// selectAll function gets all the burgers
+	selectAll: function(cb) {
+		orm.selectAll('burgers', function(res) {
+			cb(res);
+		});
+	},
+	// insertOne function adds new burger
+	insertOne: function(cols, vals, cb) {
+		orm.insertOne('burgers', cols, vals, function(res) {
+			cb(res);
+		});
+	},
+	// updateOne changes burger status to devoured
+	updateOne: function(objColVals, condition, cb) {
+		orm.updateOne('burgers', objColVals, condition, function(res) {
+			cb(res);
+		});
+	}
 }
 
 ///burger.selectAll()

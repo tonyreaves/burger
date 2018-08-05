@@ -8,11 +8,11 @@
   <div class="container">
     <div class="row">
       <div class="burgerCol">
+        <p>Click a burger to devour it.</p>
         {{#each burgers}}
           {{#unless this.devoured}}
             <div>
                 <button type="submit" class="burgersToEat" id="devour"> {{this.burger_name}}</button>
-                <input type="text" value={{this.devoured}} >
               </form>
             </div>
           {{/unless}}
